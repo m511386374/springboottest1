@@ -1,0 +1,18 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    name: test
+    url: jdbc:mysql://localhost:3306/User?characterEncoding=utf8&serverTimezone=UTC
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.jdbc.Driver
+# 配置mybatis
+mybatis:
+  mapper-locations: classpath:mappers/*.xml
+  # 全局的映射，不用在xml文件写实体类的全路径
+  type-aliases-package: com.example.springboottest1.entity
+  configuration:
+    # 开启驼峰映射
+    map-underscore-to-camel-case: true
